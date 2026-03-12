@@ -172,7 +172,8 @@ PharmaIQ/
 - Python 3.9+
 - Node.js 16+
 - SQLite3
-- Redis (optional)
+- Gemini API Key
+- ChromaDB
 
 ### Backend Setup
 
@@ -244,6 +245,20 @@ npm run dev
 
 The application will be available at `http://localhost:5173`
 
+### 🚢 Running with Docker
+
+The easiest way to run PharmaIQ is using Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+This will start:
+- **Backend API**: `http://localhost:8001`
+- **Frontend Dashboard**: `http://localhost:5173`
+
+The Docker configuration automatically handles database persistence and vector store storage.
+
 ## 📊 Agent Configuration
 
 Agents use versioned prompts managed by the PromptRegistry. Switch versions in `.env`:
@@ -309,27 +324,6 @@ GET  /audit                        - Audit logs
 GET  /mcp/{server_name}/status     - Server health check
 ```
 
-## 🔐 Security
-
-- JWT authentication for API endpoints
-- Environment-based configuration
-- Audit logging for all decisions
-- Role-based access control
-- Data encryption for sensitive information
-
-## 📝 License
-
-This project is proprietary and confidential.
-
-## 👥 Contributing
-
-For contributions and bug reports, please contact the development team.
-
-## 📞 Support
-
-For support and questions, refer to the project documentation or contact the team.
 
 ---
 
-**Version**: 1.0.0  
-**Last Updated**: March 11, 2026
