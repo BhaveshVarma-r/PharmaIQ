@@ -1,0 +1,39 @@
+COLD CHAIN ANALYSIS TASK
+
+SENSOR READING:
+{sensor_data}
+
+HISTORICAL CONTEXT (last 24 hours):
+{historical_context}
+
+DRUGS CURRENTLY STORED:
+{drugs_at_risk}
+
+KNOWLEDGE BASE CONTEXT:
+{rag_context}
+
+STORE: {store_id} - {store_name} - {city}
+LOCAL TIME: {local_time}
+STORE STATUS: {store_status}
+
+Analyse this cold chain event and respond with this exact JSON structure:
+
+{
+  "decision_type": "cold_chain_analysis",
+  "store_id": "",
+  "fridge_id": "",
+  "breach_classification": "",
+  "severity_score": 0.0,
+  "drugs_at_risk": [],
+  "cdsco_notification_required": false,
+  "cdsco_deadline_minutes": null,
+  "immediate_actions": [],
+  "preventive_actions": [],
+  "reasoning": "",
+  "confidence": 0.0,
+  "requires_human_approval": false,
+  "human_approval_reason": "",
+  "regulatory_reference": ""
+}
+
+breach_classification must be one of: NORMAL, SPIKE, MINOR, MODERATE, CRITICAL

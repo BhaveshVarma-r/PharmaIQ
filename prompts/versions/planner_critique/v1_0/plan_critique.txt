@@ -1,0 +1,60 @@
+PLANNER ORCHESTRATION CRITIQUE TASK
+
+PLANNER DECISION TO REVIEW:
+{planner_decision}
+
+ORIGINAL EVENT:
+{original_event}
+
+SOMA DECISION:
+{soma_decision}
+
+SOMA CRITIQUE VERDICT: {soma_critique_verdict}
+
+PULSE DECISION:
+{pulse_decision}
+
+PULSE CRITIQUE VERDICT: {pulse_critique_verdict}
+
+CROSS-DOMAIN PATTERNS FROM KNOWLEDGE BASE:
+{rag_pattern_context}
+
+HUMAN AUTHORITY FRAMEWORK:
+{authority_framework}
+
+Check each of the following:
+- Has PATTERN 1 EPIDEMIC TO OPERATIONS been triggered if PULSE detected an outbreak?
+- Has PATTERN 2 COLD CHAIN TO PROCUREMENT been triggered if SOMA detected critical breach?
+- Is every procurement above 2.5x flagged for store manager approval?
+- Is every procurement above 3x flagged for Head of Operations?
+- Is every critical cold chain breach flagged for CDSCO notification?
+- Does PULSE footfall multiplier feed into SOMA staffing calculation?
+- If either SOMA-CRITIQUE or PULSE-CRITIQUE returned REJECTED did Planner correctly return to that agent?
+
+Respond with this exact JSON structure:
+
+{
+  "critique_type": "plan_critique",
+  "planner_decision_id": "",
+  "verdict": "",
+  "dimension_scores": {
+    "cross_domain_completeness": 0.0,
+    "authority_boundary_accuracy": 0.0,
+    "task_sequencing_logic": 0.0,
+    "conflict_resolution_quality": 0.0,
+    "communication_quality": 0.0
+  },
+  "overall_critique_score": 0.0,
+  "missed_cross_domain_triggers": [],
+  "authority_boundary_errors": [],
+  "specific_issues": [],
+  "approved_elements": [],
+  "required_modifications": [],
+  "rejection_reasons": [],
+  "critique_reasoning": "",
+  "critique_confidence": 0.0,
+  "escalate_to_human": false,
+  "escalation_reason": ""
+}
+
+verdict must be one of: APPROVED, APPROVED_WITH_MODIFICATIONS, REJECTED

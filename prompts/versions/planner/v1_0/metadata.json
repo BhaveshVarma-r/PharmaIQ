@@ -1,0 +1,14 @@
+{
+  "agent": "planner",
+  "version": "1.0",
+  "created_at": "2024-01-15",
+  "created_by": "pharmaiq-team",
+  "description": "Planner orchestrates SOMA and PULSE with cross-domain intelligence",
+  "changelog": "Initial release",
+  "active": true,
+  "prompts": {
+    "system": "system.txt",
+    "task_decomposition": "task_decomposition.txt",
+    "cross_domain_reasoning": "cross_domain_reasoning.txt"
+  }
+}

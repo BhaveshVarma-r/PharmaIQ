@@ -1,0 +1,42 @@
+NEAR-EXPIRY DEMAND ADJUSTMENT TASK
+
+NEAR-EXPIRY INVENTORY:
+{near_expiry_inventory}
+
+SALES VELOCITY DATA:
+{sales_velocity_data}
+
+INTER-STORE DISTANCE MATRIX:
+{distance_matrix}
+
+MARKDOWN HISTORY:
+{markdown_history}
+
+KNOWLEDGE BASE CONTEXT:
+{rag_clearance_context}
+
+Classify each SKU by risk tier:
+- TIER1 CRITICAL: expires within 30 days with more than 60 days stock remaining
+- TIER2 HIGH: expires within 45 days with more than 45 days stock remaining
+- TIER3 MEDIUM: expires within 60 days with more than 30 days stock remaining
+
+For each Tier1 and Tier2 SKU evaluate in order:
+1. Inter-store transfer to higher-velocity store (preferred, no margin loss)
+2. Bulk discount to institutional buyers
+3. Markdown at store level
+4. Return to distributor
+5. Write-off as last resort
+
+Respond with this exact JSON structure:
+
+{
+  "decision_type": "demand_adjustment",
+  "analysis_date": "",
+  "total_near_expiry_value_inr": 0,
+  "sku_analysis": [],
+  "total_recoverable_value_inr": 0,
+  "total_unavoidable_writeoff_inr": 0,
+  "prioritised_actions": [],
+  "confidence": 0.0,
+  "reasoning": ""
+}

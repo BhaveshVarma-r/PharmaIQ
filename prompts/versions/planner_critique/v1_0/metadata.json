@@ -1,0 +1,13 @@
+{
+  "agent": "planner_critique",
+  "version": "1.0",
+  "created_at": "2024-01-15",
+  "created_by": "pharmaiq-team",
+  "description": "Planner Critique validates orchestration quality and cross-domain coverage",
+  "changelog": "Initial release",
+  "active": true,
+  "prompts": {
+    "system": "system.txt",
+    "plan_critique": "plan_critique.txt"
+  }
+}

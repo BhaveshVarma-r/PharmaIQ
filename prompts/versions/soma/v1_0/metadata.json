@@ -1,0 +1,14 @@
+{
+  "agent": "soma",
+  "version": "1.0",
+  "created_at": "2024-01-15",
+  "created_by": "pharmaiq-team",
+  "description": "Initial SOMA agent prompts",
+  "changelog": "Initial release",
+  "active": true,
+  "prompts": {
+    "system": "system.txt",
+    "cold_chain_analysis": "cold_chain_analysis.txt",
+    "staff_scheduling": "staff_scheduling.txt"
+  }
+}

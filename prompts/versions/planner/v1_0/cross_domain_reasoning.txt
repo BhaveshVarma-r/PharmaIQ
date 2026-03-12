@@ -1,0 +1,51 @@
+CROSS-DOMAIN SYNTHESIS TASK
+
+SOMA DECISION (after critique):
+{soma_decision}
+
+PULSE DECISION (after critique):
+{pulse_decision}
+
+SOMA CRITIQUE RESULT:
+{soma_critique}
+
+PULSE CRITIQUE RESULT:
+{pulse_critique}
+
+ORIGINAL EVENT:
+{original_event}
+
+OPERATIONAL CONTEXT:
+{operational_context}
+
+CROSS-DOMAIN PATTERNS FROM KNOWLEDGE BASE:
+{rag_pattern_context}
+
+HUMAN AUTHORITY FRAMEWORK:
+{authority_framework}
+
+Synthesise SOMA and PULSE outputs into a coherent integrated action plan.
+Identify conflicts and resolve them with patient safety taking precedence.
+Identify coverage gaps neither agent addressed.
+Enforce human authority boundaries across all actions.
+
+Respond with this exact JSON structure:
+
+{
+  "decision_type": "cross_domain_synthesis",
+  "event_id": "",
+  "synthesis_status": "",
+  "conflicts_detected": [],
+  "coverage_gaps": [],
+  "integrated_action_plan": [],
+  "store_operations_communication": "",
+  "total_financial_impact_inr": {
+    "risk_mitigated": 0,
+    "cost_incurred": 0,
+    "net_value": 0
+  },
+  "reasoning": "",
+  "confidence": 0.0
+}
+
+synthesis_status must be one of: COMPLETE, PARTIAL, CONFLICT_DETECTED, HUMAN_REQUIRED

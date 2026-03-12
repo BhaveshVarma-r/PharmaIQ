@@ -1,0 +1,13 @@
+{
+  "agent": "pulse_critique",
+  "version": "1.0",
+  "created_at": "2024-01-15",
+  "created_by": "pharmaiq-team",
+  "description": "PULSE Critique Agent validates demand forecasts and procurement decisions",
+  "changelog": "Initial release",
+  "active": true,
+  "prompts": {
+    "system": "system.txt",
+    "forecast_critique": "forecast_critique.txt"
+  }
+}

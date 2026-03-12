@@ -1,0 +1,47 @@
+STAFF SCHEDULING CRITIQUE TASK
+
+SOMA DECISION TO REVIEW:
+{soma_decision}
+
+ORIGINAL SCHEDULE DATA:
+{original_schedule_data}
+
+STORE CONTEXT:
+{store_context}
+
+REGULATORY CONTEXT FROM KNOWLEDGE BASE:
+{rag_regulatory_context}
+
+Check each of the following:
+- Has SOMA identified ALL hours with zero registered pharmacists not just peak hours?
+- Is zero pharmacists during operating hours classified as CRITICAL not HIGH?
+- Has SOMA applied the correct staffing formula: base 2 plus 1 per 50 expected patients per hour?
+- Are recommended schedule changes achievable with available staff roster?
+- Has SOMA avoided scheduling any staff member for more than 9 consecutive hours?
+- Is the cost impact calculation realistic using 450 rupees per hour for overtime pharmacist rate?
+
+Respond with this exact JSON structure:
+
+{
+  "critique_type": "staff_critique",
+  "soma_decision_id": "",
+  "verdict": "",
+  "dimension_scores": {
+    "regulatory_accuracy": 0.0,
+    "patient_safety_calibration": 0.0,
+    "operational_feasibility": 0.0,
+    "evidence_quality": 0.0,
+    "proportionality": 0.0
+  },
+  "overall_critique_score": 0.0,
+  "specific_issues": [],
+  "approved_elements": [],
+  "required_modifications": [],
+  "rejection_reasons": [],
+  "critique_reasoning": "",
+  "critique_confidence": 0.0,
+  "escalate_to_human": false,
+  "escalation_reason": ""
+}
+
+verdict must be one of: APPROVED, APPROVED_WITH_MODIFICATIONS, REJECTED

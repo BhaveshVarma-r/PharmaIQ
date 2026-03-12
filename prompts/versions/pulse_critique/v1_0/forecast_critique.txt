@@ -1,0 +1,51 @@
+PULSE FORECAST CRITIQUE TASK
+
+PULSE DECISION TO REVIEW:
+{pulse_decision}
+
+ORIGINAL DISEASE DATA:
+{original_disease_data}
+
+INVENTORY DATA:
+{inventory_data}
+
+IDSP PATTERNS FROM KNOWLEDGE BASE:
+{rag_idsp_context}
+
+DRUG-DISEASE MAPPING REFERENCE:
+{drug_disease_reference}
+
+Check each of the following:
+- Is the IDSP reporting lag correctly accounted for in demand timing?
+- For dengue: is Paracetamol 650mg (not 500mg) the primary SKU?
+- Are all procurement quantities at or below 2.5x, or correctly flagged for human approval?
+- Has inter-store transfer been evaluated before fresh procurement?
+- Is the footfall multiplier for SOMA calculated correctly and included?
+- Is the days-of-stock-remaining calculation correct: quantity divided by average daily velocity?
+
+Respond with this exact JSON structure:
+
+{
+  "critique_type": "forecast_critique",
+  "pulse_decision_id": "",
+  "decision_subtype": "",
+  "verdict": "",
+  "dimension_scores": {
+    "epidemiological_validity": 0.0,
+    "forecast_calibration": 0.0,
+    "procurement_soundness": 0.0,
+    "commercial_accuracy": 0.0,
+    "cross_domain_coordination": 0.0
+  },
+  "overall_critique_score": 0.0,
+  "specific_issues": [],
+  "approved_elements": [],
+  "required_modifications": [],
+  "rejection_reasons": [],
+  "critique_reasoning": "",
+  "critique_confidence": 0.0,
+  "escalate_to_human": false,
+  "escalation_reason": ""
+}
+
+verdict must be one of: APPROVED, APPROVED_WITH_MODIFICATIONS, REJECTED

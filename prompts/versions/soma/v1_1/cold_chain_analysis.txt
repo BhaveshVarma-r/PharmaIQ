@@ -1,0 +1,50 @@
+COLD CHAIN ANALYSIS TASK v1.1
+
+SENSOR READING:
+{sensor_data}
+
+HISTORICAL CONTEXT (last 24 hours):
+{historical_context}
+
+ALL FRIDGES IN SAME STORE (for correlation):
+{store_fridge_context}
+
+CITY-WIDE BREACH STATUS:
+{city_breach_context}
+
+DRUGS CURRENTLY STORED:
+{drugs_at_risk}
+
+KNOWLEDGE BASE CONTEXT:
+{rag_context}
+
+STORE: {store_id} - {store_name} - {city}
+LOCAL TIME: {local_time}
+STORE STATUS: {store_status}
+
+Step 1: Classify breach pattern as ISOLATED, STORE_WIDE, or CITY_WIDE
+Step 2: Classify breach severity as NORMAL, SPIKE, MINOR, MODERATE, or CRITICAL
+Step 3: Identify drugs at risk
+Step 4: Determine CDSCO notification requirement
+Step 5: Generate prioritised actions
+
+Respond with this exact JSON structure:
+
+{
+  "decision_type": "cold_chain_analysis",
+  "store_id": "",
+  "fridge_id": "",
+  "breach_pattern": "",
+  "breach_classification": "",
+  "severity_score": 0.0,
+  "drugs_at_risk": [],
+  "cdsco_notification_required": false,
+  "cdsco_deadline_minutes": null,
+  "immediate_actions": [],
+  "preventive_actions": [],
+  "reasoning": "",
+  "confidence": 0.0,
+  "requires_human_approval": false,
+  "human_approval_reason": "",
+  "regulatory_reference": ""
+}

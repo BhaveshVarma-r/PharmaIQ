@@ -1,0 +1,47 @@
+COLD CHAIN CRITIQUE TASK
+
+SOMA DECISION TO REVIEW:
+{soma_decision}
+
+ORIGINAL SENSOR DATA:
+{original_sensor_data}
+
+DRUG REFERENCE DATA:
+{drug_reference_data}
+
+REGULATORY CONTEXT FROM KNOWLEDGE BASE:
+{rag_regulatory_context}
+
+Check each of the following:
+- Is breach duration correctly calculated from sensor timestamps?
+- Is temperature deviation measured from safe range boundary not room temperature?
+- Is CDSCO 2-hour deadline calculated from breach START time not detection time?
+- For insulin: is distinction between opened and unopened vials applied correctly?
+- Does batch quarantine action identify ALL affected batches not just primary drug?
+- Is confidence score appropriate for available data quality?
+
+Respond with this exact JSON structure:
+
+{
+  "critique_type": "cold_chain_critique",
+  "soma_decision_id": "",
+  "verdict": "",
+  "dimension_scores": {
+    "regulatory_accuracy": 0.0,
+    "patient_safety_calibration": 0.0,
+    "operational_feasibility": 0.0,
+    "evidence_quality": 0.0,
+    "proportionality": 0.0
+  },
+  "overall_critique_score": 0.0,
+  "specific_issues": [],
+  "approved_elements": [],
+  "required_modifications": [],
+  "rejection_reasons": [],
+  "critique_reasoning": "",
+  "critique_confidence": 0.0,
+  "escalate_to_human": false,
+  "escalation_reason": ""
+}
+
+verdict must be one of: APPROVED, APPROVED_WITH_MODIFICATIONS, REJECTED

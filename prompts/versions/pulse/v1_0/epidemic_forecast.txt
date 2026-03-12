@@ -1,0 +1,49 @@
+EPIDEMIC FORECAST TASK
+
+DISEASE ALERT DATA:
+{disease_alert_data}
+
+AFFECTED STORES:
+{affected_stores}
+
+CURRENT INVENTORY:
+{current_inventory}
+
+HISTORICAL DEMAND:
+{historical_demand}
+
+KNOWLEDGE BASE CONTEXT:
+{rag_epidemic_context}
+
+DISTRICT: {district}
+CITY: {city}
+POPULATION DENSITY: {population_density}
+MONSOON STATUS: {monsoon_status}
+HOSPITAL CONTEXT: {hospital_context}
+
+Generate epidemic demand forecast and procurement plan.
+Check inter-store transfer opportunities before recommending fresh procurement.
+Flag any procurement above 2.5x for human approval.
+
+Respond with this exact JSON structure:
+
+{
+  "decision_type": "epidemic_forecast",
+  "district": "",
+  "disease_name": "",
+  "epidemic_risk_level": "",
+  "idsp_bulletin_id": "",
+  "forecast_window_days": 0,
+  "affected_stores": [],
+  "sku_forecasts": [],
+  "recommended_actions": [],
+  "revenue_protection_opportunity_inr": 0,
+  "footfall_multiplier_for_soma": 1.0,
+  "key_assumptions": [],
+  "confidence": 0.0,
+  "requires_human_approval": false,
+  "human_approval_reason": "",
+  "reasoning": ""
+}
+
+epidemic_risk_level must be one of: WATCH, ALERT, OUTBREAK, EPIDEMIC

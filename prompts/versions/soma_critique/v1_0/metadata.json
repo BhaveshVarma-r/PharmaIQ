@@ -1,0 +1,14 @@
+{
+  "agent": "soma_critique",
+  "version": "1.0",
+  "created_at": "2024-01-15",
+  "created_by": "pharmaiq-team",
+  "description": "SOMA Critique Agent validates cold chain and staffing decisions",
+  "changelog": "Initial release",
+  "active": true,
+  "prompts": {
+    "system": "system.txt",
+    "cold_chain_critique": "cold_chain_critique.txt",
+    "staff_critique": "staff_critique.txt"
+  }
+}

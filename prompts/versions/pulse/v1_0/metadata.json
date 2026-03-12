@@ -1,0 +1,14 @@
+{
+  "agent": "pulse",
+  "version": "1.0",
+  "created_at": "2024-01-15",
+  "created_by": "pharmaiq-team",
+  "description": "PULSE epidemic demand forecasting and near-expiry detection",
+  "changelog": "Initial release",
+  "active": true,
+  "prompts": {
+    "system": "system.txt",
+    "epidemic_forecast": "epidemic_forecast.txt",
+    "demand_adjustment": "demand_adjustment.txt"
+  }
+}

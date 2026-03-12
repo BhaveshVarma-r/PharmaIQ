@@ -1,0 +1,49 @@
+TASK DECOMPOSITION REQUEST
+
+INCOMING EVENT:
+{incoming_event}
+
+ACTIVE SOMA TASKS:
+{active_soma_tasks}
+
+ACTIVE PULSE TASKS:
+{active_pulse_tasks}
+
+PENDING HUMAN APPROVALS:
+{pending_approvals}
+
+SYSTEM ALERT LEVEL:
+{system_alert_level}
+
+AFFECTED STORE CONTEXT:
+{affected_store_context}
+
+CROSS-DOMAIN PATTERNS FROM KNOWLEDGE BASE:
+{rag_pattern_context}
+
+Decompose this event into agent tasks and determine execution sequence.
+Identify all human authority checkpoints.
+Check which cross-domain patterns apply.
+
+Respond with this exact JSON structure:
+
+{
+  "decision_type": "task_decomposition",
+  "event_id": "",
+  "event_classification": {
+    "primary_domain": "",
+    "secondary_domains": [],
+    "cross_domain_patterns_triggered": [],
+    "overall_severity": "",
+    "patient_safety_risk": false
+  },
+  "task_sequence": [],
+  "critical_path": [],
+  "total_estimated_resolution_minutes": 0,
+  "escalation_triggers": [],
+  "reasoning": "",
+  "confidence": 0.0
+}
+
+primary_domain must be one of: COLD_CHAIN, STAFFING, EPIDEMIC, EXPIRY
+overall_severity must be one of: CRITICAL, HIGH, MEDIUM, LOW

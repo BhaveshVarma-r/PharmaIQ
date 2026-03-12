@@ -1,0 +1,49 @@
+STAFF SCHEDULING ANALYSIS TASK v1.1
+
+SCHEDULE DATA:
+{schedule_data}
+
+STORE: {store_id} - {store_name} - {city}
+OPERATING HOURS: {operating_hours}
+AVERAGE DAILY PATIENTS: {avg_daily_patients}
+CURRENT SEASON: {current_season}
+SEASONAL MULTIPLIER: {seasonal_multiplier}
+SEASON RATIONALE: {season_rationale}
+
+FOOTFALL FORECAST:
+{footfall_forecast}
+
+DISEASE ALERT CONTEXT:
+{disease_context}
+
+STAFF ROSTER:
+{staff_roster}
+
+COMPLIANCE STATUS:
+{compliance_status}
+
+KNOWLEDGE BASE CONTEXT:
+{rag_context}
+
+Apply the seasonal multiplier to all footfall calculations before determining staffing needs.
+
+Respond with this exact JSON structure:
+
+{
+  "decision_type": "staff_scheduling",
+  "store_id": "",
+  "analysis_period": "",
+  "seasonal_adjustment_applied": "",
+  "compliance_gaps": [],
+  "optimised_schedule": [],
+  "cost_impact": {
+    "estimated_overtime_savings_inr": 0,
+    "understaffing_risk_cost_inr": 0
+  },
+  "immediate_actions": [],
+  "reasoning": "",
+  "confidence": 0.0,
+  "requires_human_approval": false,
+  "human_approval_reason": "",
+  "regulatory_reference": ""
+}
